@@ -1,0 +1,119 @@
+:root {
+	--darkred: #0D2149;
+	--platinum: #e5e5e5;
+	--black: #0D2149;
+	--thumb: #f8f8f8;
+  }
+  
+  * {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+  }
+  
+  body {
+	font: 16px / 24px;
+	color: var(--black);
+	background: var(--platinum);
+  }
+  
+  .container {
+	max-width: 1400px;
+  }
+  
+  
+  .cards {
+    display: flex;
+    padding: 25px 0px;
+    list-style: none;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    flex-wrap: nowrap; /* Evita que las tarjetas se envuelvan */
+    justify-content: flex-start; /* Alinea las tarjetas al principio */
+    width: calc(100% + 30px); /* Ancho suficiente para tres tarjetas más el espacio entre ellas */
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 calc(10% - 100px); /* Ancho para mostrar tres tarjetas */
+    padding: 20px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
+    scroll-snap-align: start;
+    transition: all 0.2s;
+    height: 500px;
+    font-size: 0.8em;
+    margin-right: 10px; /* Espacio entre tarjetas */
+}
+
+.card:last-child {
+    margin-right: 0; /* Elimina el margen derecho de la última tarjeta */
+}
+  
+  .card:not(:last-child) {
+	margin-right: 10px;
+  }
+  
+  .card:hover {
+	color: var(--white);
+	background: var(--red);
+  }
+  
+  .card .card-title {
+	font-size: 20px;
+  }
+  
+  .card .card-content {
+	margin: 20px 0;
+	max-width: 85%;
+  }
+  
+  
+  .cards::-webkit-scrollbar {
+	height: 12px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb,
+  .cards::-webkit-scrollbar-track {
+	border-radius: 92px;
+  }
+  
+  .cards::-webkit-scrollbar-thumb {
+	background: var(--darkred);
+  }
+  
+  .cards::-webkit-scrollbar-track {
+	background: var(--thumb);
+  }
+  
+  @media (min-width: 500px) {
+	.card {
+	  flex-basis: calc(50% - 10px);
+	}
+  
+	.card:not(:last-child) {
+	  margin-right: 20px;
+	}
+  }
+  
+  @media (min-width: 700px) {
+	.card {
+	  flex-basis: calc(calc(100% / 3) - 20px);
+	}
+  
+	.card:not(:last-child) {
+	  margin-right: 30px;
+	}
+  }
+  
+  @media (min-width: 1100px) {
+	.card {
+	  flex-basis: calc(25% - 30px);
+	}
+  
+	.card:not(:last-child) {
+	  margin-right: 40px;
+	}
+  }
