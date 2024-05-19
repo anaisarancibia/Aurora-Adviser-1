@@ -11,18 +11,56 @@
 	margin: 0;
   }
   
+  .card-title{
+  padding-top: 2em;
+  padding-bottom: 0.3em;
+  font-weight: 700;
+  font-size: 1.711em;
+}
+
+
   body {
-	font: 16px / 24px;
+	font-size: 1em;
 	color: var(--black);
 	background: var(--platinum);
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+
+  .mi-clase {
+    display: flex;
+    padding-bottom: 1em;
+    font-size: 0.917em;
+  }
+
+  .mi-clase2 p {
+    color: #0D2149;
+    font-weight: 500;
+    padding-bottom: 2em;
+    font-size: 1.069em;
+  }
+
+  .mi-clase p {
+    text-align: left;
+    background-color: #0D2149;
+    color: #CBD3F2;
+    padding: 5px 10px;
+    margin: 0;
+    margin-right: 10px; /* Espacio entre los párrafos */
+    font-weight: 700;
   }
   
   .container {
 	max-width: 1400px;
   }
-  
-  
+
   .cards {
+    text-align: left;
     display: flex;
     padding: 25px 0px;
     list-style: none;
@@ -33,19 +71,19 @@
     width: calc(100% + 30px); /* Ancho suficiente para tres tarjetas más el espacio entre ellas */
 }
 
-.card {
+  .card {
     display: flex;
     flex-direction: column;
-    flex: 0 0 calc(10% - 100px); /* Ancho para mostrar tres tarjetas */
-    padding: 20px;
+    flex: 0 0 calc(30% - 500px); /* Ancho para mostrar tres tarjetas */
+    padding: 2.3em;
     background: var(--white);
     border-radius: 12px;
+    border: 3px solid#0D2149;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 15%);
     scroll-snap-align: start;
     transition: all 0.2s;
-    height: 500px;
+    height: auto;
     font-size: 0.8em;
-    margin-right: 10px; /* Espacio entre tarjetas */
 }
 
 .card:last-child {
@@ -67,7 +105,6 @@
   
   .card .card-content {
 	margin: 20px 0;
-	max-width: 85%;
   }
   
   
@@ -88,19 +125,22 @@
 	background: var(--thumb);
   }
   
-  @media (min-width: 500px) {
-	.card {
-	  flex-basis: calc(50% - 10px);
-	}
-  
-	.card:not(:last-child) {
-	  margin-right: 20px;
-	}
-  }
+
+  @media (min-width: 400px) {
+    .card {
+      flex-basis: calc(calc(100% / 1) - 20px);
+
+    }
+    
+    .card:not(:last-child) {
+      margin-right: 20px;
+    }
+    }
+    
   
   @media (min-width: 700px) {
 	.card {
-	  flex-basis: calc(calc(100% / 3) - 20px);
+	  flex-basis: calc(calc(100% / 2) - 20px);
 	}
   
 	.card:not(:last-child) {
@@ -108,12 +148,14 @@
 	}
   }
   
-  @media (min-width: 1100px) {
-	.card {
-	  flex-basis: calc(25% - 30px);
-	}
+@media (min-width: 1100px) {
+  .card {
+    flex-basis: calc(calc(100% / 3) - 30px);
+  }
   
 	.card:not(:last-child) {
 	  margin-right: 40px;
 	}
   }
+
+  
