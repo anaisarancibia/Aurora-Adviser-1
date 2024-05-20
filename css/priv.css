@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&display=swap');
+
+body {
+  font-family: "Raleway", sans-serif;
+  background-color: #0d2149;
+  color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 5em;
+  text-align: left;
+  margin-top: 1em; /* Eliminate default margin */
+  line-height: 1; /* Ensure h1 is vertically aligned */
+}
+
+h2{
+  font-size: 2em;
+  text-align: left;
+  margin-top: 2em; /* Eliminate default margin */
+}
+
+p{
+    font-size: 1.5em; 
+    line-height: 1.5em;
+    font-weight: 400;
+}
+
+.content {
+  padding: 5.75em 6.688em 4em 6.688em;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+ul li{
+    font-size: 1.5em; 
+}
+
+ol {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ol > li {
+    display: flex; /* Usa flexbox para alinear horizontalmente */
+    align-items: center; /* Centra verticalmente los elementos */
+    font-size: 2em; /* Tamaño de fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    margin-bottom: 1em; /* Espaciado inferior para separar los elementos */
+  }
+  
+  ol > li:before {
+    content: counter(item) "."; /* Agrega un punto al número de lista */
+    counter-increment: item;
+    font-size: inherit; /* Hereda el tamaño de fuente del <li> */
+    font-weight: inherit; /* Hereda el grosor de la fuente del <li> */
+    margin-right: 0.5em; /* Espaciado entre el número y el texto */
+  }
+  
+  ol > li h2 {
+    font-size: inherit; /* Hereda el tamaño de fuente del <li> */
+    font-weight: inherit; /* Hereda el grosor de la fuente del <li> */
+    margin: 0; /* Elimina cualquier margen que pueda tener el <h2> */
+  }
+  
+  
