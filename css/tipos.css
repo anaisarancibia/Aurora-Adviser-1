@@ -1,14 +1,25 @@
+body{
+  background-color: #0D2149;
+}
 
-
-#tole {
-    background-color: #0D2149; 
-    padding: 5.75em 6.688em 4em 6.688em;
-  }
-
-#tole p {
+p {
   font-size: 1.5em; 
   line-height: 1.5em;
   font-weight: 600;
+}
+
+h1 {
+  font-size: 5em
+}
+
+#tole {
+    background-color: #0D2149; 
+    padding: 20px; 
+    padding: 3em 3em 3em 3em;
+}
+
+#tole p {
+    font-size: 1em; 
 }
 
 
@@ -23,7 +34,7 @@
     display: flex; /* Utilizar flexbox */
     align-items: center;
     justify-content: center;
-    margin-top: -1.5em;
+    margin-top: -0.5em;
 }
 
 #tole .engaño {
@@ -37,11 +48,10 @@
     width: auto; /* Ancho del rectángulo */
     height: 2em; /* Altura del rectángulo */
     margin-right: 10px; 
-    font-size: 1.327em;
 }
 
 #tole h2{
-    font-size: 4em;
+    font-size: 2em;
     margin-bottom: 0.5em;
     color: #f8f8f8;
 }
@@ -56,23 +66,12 @@
     }
 
     #tole {
-        padding: 2em; /* Reducir el relleno */
+        padding: 2empx; /* Reducir el relleno */
     }
 
     #tole p{
      font-size: 16px;
     }
-
-    #tole .engaño {
-      width: auto; /* Ancho del rectángulo */
-      height: auto; /* Altura del rectángulo */
-      margin-right: 10px; 
-      font-size: 10px;
-  }
-
-  .engaños-container2 {
-    margin-top: -0.7em;
-}
 
 }
 
@@ -119,10 +118,8 @@
 
 .text {
   color: #f8f8f8;
-  font-size: 1.5em; 
-  line-height: 1.5em;
-  font-weight: 600;
-  padding: 1em 3em;
+  font-size: 16px;
+  padding: 1em 10em;
   bottom: 8px;
   width: 100%;
   text-align: center;
@@ -131,7 +128,7 @@
 
 .title {
   color: #f8f8f8;
-  font-size: 2.125em;
+  font-size: 28px;
   font-weight: 700;
   padding: 8px 12px;
   top: 0;
@@ -139,7 +136,30 @@
   margin-top: 20px;
 }
 
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: rgba(248, 248, 248, 0.2); /* Color con menor opacidad */
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }  
 
+  .dot.active {
+    background-color: red;
+}
+
+
+/* Fading animation */
+
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 
 @media screen and (max-width: 768px) {
     .prev, .next {
@@ -159,8 +179,7 @@
     }
     
     .title {
-      font-size: 1.2em;
-      line-height: 1.5em;
+      font-size: 24px;
     }
     
     .text {
@@ -168,10 +187,7 @@
       padding: 0.5em;
     }
 
-    #tole h2{
-      font-size: 1.888em;
   }
-}
 
 
 
@@ -237,7 +253,38 @@
     clear: both;
   }
 
+.instalación{
+  padding-top: 4em;
+}
 
+.botones {
+  font-family: "Raleway", sans-serif;
+  display: flex;
+  gap: 10px; /* Espacio entre los botones */
+  margin-bottom: 20px; /* Asegura que los botones estén debajo del texto */
+}
+
+.button {
+  font-family: "Raleway", sans-serif;
+  background-color: #0D2149;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.button i {
+  margin-right: 8px; /* Espacio entre el icono y el texto */
+  color: white; /* Color blanco para el icono */
+}
+
+.button:hover {
+  background-color: #2AB9D5; /* Color de fondo al pasar el ratón */
+}
 
 
   /* Desplegable */
@@ -301,8 +348,49 @@
     font-size: 28px;
   }
 
+  /* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+  .columna2 {
+    margin-left: auto; /* Eliminar el margen izquierdo */
+    margin-right: auto; /* Asegurar que esté centrado horizontalmente */
+    margin-top: 2em; /* Añadir margen superior para espacio adicional si es necesario */
+    width: 80%; /* Ajusta el ancho según sea necesario */
+  }
+}
+  
+/* enumeracion */
+.custom-list {
+  counter-reset: custom-counter;
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  position: relative;
+}
 
+.custom-list li {
+  position: relative;
+  padding-left: 100px; /* Ajusta este valor según el tamaño de los círculos */
+  margin-bottom: 20px;
+}
 
+.custom-list li::before {
+  content: counter(custom-counter);
+  counter-increment: custom-counter;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(to right, #CBD3F2 0%, #C1B1E5 50%);
+  color: #0d2149;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px; /* Tamaño de los números */
+  font-weight: bold;
+}
 
 
   /* FORMS */
@@ -356,7 +444,6 @@
   }
 
 
-
   .Preguntas input[type=file] {
     /* Estilos para el input de tipo file */
     width: 100%; /* Full width */
@@ -370,9 +457,6 @@
     color: #0D2149; /* Text color */
   }
   
-
-
-
   
   /* ---------------------- CONTACTO ------------------------- */
 
@@ -380,10 +464,40 @@
     padding: 3em;
     background-color: #CBD3F2;
     color: #0D2149;
-    
+    text-align: center; /* Alinear texto al centro */
+    position: relative; /* Agregar posición relativa */
+  }
+  
+  #contacto img{
+    width: 85.13px;
+    height: 56.95px;
+    top: 2903px;
+    left: 716px;
+    gap: 0px;
+    opacity: 0px;
+  }
+
+  #contacto i {
+    gap: 10rem;
+    padding: 2em;
   }
 
   #contacto p{
     color: #0D2149;
-
+    margin-bottom: 10px;
   }
+  
+  @media screen and (max-width: 768px) {
+    #contacto i {
+      gap: 5rem; /* Ajuste del espacio entre los íconos */
+      padding: 1em; /* Ajuste del espaciado interno */
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    #contacto i {
+      gap: 2rem; /* Ajuste del espacio entre los íconos */
+      padding: 0.5em; /* Ajuste del espaciado interno */
+    }
+  }
+
