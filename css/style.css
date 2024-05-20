@@ -119,20 +119,19 @@ h2 {
 
 
 /*------------ BARRA DE BUSQUEDA --------------*/
-
-footer {
+.buscador {
   display: flex;
 }
-footer nav {
+.buscador nav {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
 }
-footer nav li {
+.buscador nav li {
   display: flex;
   margin: 1em 1em 0em 0em ;
 }
-footer nav li a {
+.buscador nav li a {
   display: flex;
   text-decoration: none;
   padding: 0.67em;
@@ -141,13 +140,13 @@ footer nav li a {
   color: #f8f8f8;
   border: 3px solid #f8f8f8;
 }
-footer nav li a:hover {
+.buscador nav li a:hover {
   background-color: #2AB9D5;
   border: 3px solid #2AB9D5;
   text-decoration: none;
 
 }
-footer select {
+.buscador select {
   font-size: 18px;
   font-family: "Raleway";
   padding: 1em;
@@ -172,20 +171,6 @@ footer select {
     grid-template-columns: 1fr;
   }
 }/*# sourceMappingURL=style.css.map */
-
-
-@media (max-width: 480px) {
-  header, #selectorContainer, footer {
-    padding: 0.5em;
-  }
-  footer nav li a {
-    padding: 0.5em;
-  }
-  footer select {
-    font-size: 16px;
-    padding: 0.8em;
-  }
-}
 
 
 

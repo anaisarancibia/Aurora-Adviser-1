@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.3/p5.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header-footer.css">
     <script src="js/importer2.js"></script>
 
 
@@ -29,7 +30,8 @@
                 <button class="button5"><i class="fa-brands fa-chrome fa-xl"></i> Instalar ahora</button>
                 </a>
 
-            <div class="container2" onclick="myFunction(this)">                        <div class="bar1"></div>
+            <div class="container2" onclick="myFunction(this)">                        
+                <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
               </div>			
@@ -44,21 +46,16 @@
         </nav>	
 
 
-
-            <h1>Listado de Patrones Oscuros</h1>
 <!----------------------------------------- AQUÍ COMIENZA --------------------------------->
+            
+    <h1>Listado de Patrones Oscuros</h1>
 
-            <footer>
-                <nav>
-                    <li><a href="#" id="view-all">Ver todos</a></li> <!-- Enlace para ver todos los casos -->
-                  <!--  <li><a href="https://github.com/hspencer/dark-patterns">Código fuente de esta página</a></li> -->
-                  <!-- <li><a href="https://wiki.ead.pucv.cl/Taller_de_Dise%C3%B1o_de_Interacci%C3%B3n_2024#Oficinas_de_dise%C3%B1o">Oficinas del Taller</a></li> -->
-                  <!--  <li><a href="https://wiki.ead.pucv.cl/Patrones_Oscuros">Listado de patrones en Casiopea</a></li> -->
-                    
-                </nav>
-                </nav>
-                <div id="footerSelect"></div>
-            </footer>
+    <div class="buscador">
+        <nav>
+            <li><a href="tipos.html" id="view-all">Ver todos</a></li>
+        </nav>
+        <div id="footerSelect"></div>
+    </div>
     
 
     <div id='p5_loading'></div>
@@ -73,13 +70,23 @@
 
 <section id="footer">
     <div class="inner">
-        <header>
-            <a href="términos.html"> <h5>Términos y Condiciones <i class="fa-solid fa-greater-than"></i></h5> </a>
-            <a href="privacidad.html"> <h5>Políticas de Privacidad <i class="fa-solid fa-greater-than"></i></h5> </a>
-            <a href="team.html"> <h5>Sobre Nosotros</h5> </a>
-        </header>
+      <header>
+        <div class="left-section">
+          <a href="privacidad.html"><h5>Políticas de Privacidad</h5></a>
+          <i class="fa-solid fa-greater-than"></i>
+          <a href="términos.html"><h5>Términos y Condiciones</h5></a>
+          <i class="fa-solid fa-greater-than"></i>
+          <a href="team.html"><h5>AURORA TEAM</h5></a>
+        </div>
+        <div class="right-section">
+          <a href="www.facebook.com"><i class="fa-brands fa-square-facebook fa-2x"></i></a>
+                      <a href="www.instagram.com"><i class="fa-brands fa-square-instagram fa-2x"></i></a>
+                      <a href="www.twitter.com"><i class="fa-brands fa-square-x-twitter fa-2x"></i></a>
+          <img src="img/isotipo.svg" alt="Isotipo">
+        </div>
+      </header>
     </div>
-</section>
+  </section>
 
     
 </body>
