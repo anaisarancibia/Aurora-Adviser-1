@@ -16,7 +16,7 @@ h1 {
 }
 
 h2{
-  font-size: 2em;
+  font-size: 3em;
   text-align: left;
   margin-top: 2em; /* Eliminate default margin */
 }
@@ -25,6 +25,7 @@ p{
     font-size: 1.5em; 
     line-height: 1.5em;
     font-weight: 400;
+    margin-top: 1em;
 }
 
 .content {
@@ -40,28 +41,22 @@ ul li{
 ol {
     list-style-type: none;
     padding: 0;
-  }
-  
-  ol > li {
+}
+
+ol > li {
+    margin-bottom: 3em; /* Espaciado inferior para separar los elementos */
+}
+
+ol > li > h2 {
+    font-size: 3em; /* Tamaño de fuente */
+    font-weight: bold; /* Grosor de la fuente */
+    margin: 0; /* Elimina cualquier margen que pueda tener el <h2> */
     display: flex; /* Usa flexbox para alinear horizontalmente */
     align-items: center; /* Centra verticalmente los elementos */
-    font-size: 2em; /* Tamaño de fuente */
-    font-weight: bold; /* Grosor de la fuente */
-    margin-bottom: 1em; /* Espaciado inferior para separar los elementos */
-  }
-  
-  ol > li:before {
-    content: counter(item) "."; /* Agrega un punto al número de lista */
-    counter-increment: item;
-    font-size: inherit; /* Hereda el tamaño de fuente del <li> */
-    font-weight: inherit; /* Hereda el grosor de la fuente del <li> */
+}
+
+.number {
     margin-right: 0.5em; /* Espaciado entre el número y el texto */
-  }
-  
-  ol > li h2 {
-    font-size: inherit; /* Hereda el tamaño de fuente del <li> */
-    font-weight: inherit; /* Hereda el grosor de la fuente del <li> */
-    margin: 0; /* Elimina cualquier margen que pueda tener el <h2> */
-  }
-  
+}
+
   
