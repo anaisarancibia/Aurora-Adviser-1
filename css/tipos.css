@@ -1,11 +1,14 @@
+
+
 #tole {
     background-color: #0D2149; 
-    padding: 20px; 
-    padding: 3em 3em 3em 3em;
-}
+    padding: 5.75em 6.688em 4em 6.688em;
+  }
 
 #tole p {
-    font-size: 1em; 
+  font-size: 1.5em; 
+  line-height: 1.5em;
+  font-weight: 600;
 }
 
 
@@ -20,7 +23,7 @@
     display: flex; /* Utilizar flexbox */
     align-items: center;
     justify-content: center;
-    margin-top: -0.5em;
+    margin-top: -1.5em;
 }
 
 #tole .engaño {
@@ -34,10 +37,11 @@
     width: auto; /* Ancho del rectángulo */
     height: 2em; /* Altura del rectángulo */
     margin-right: 10px; 
+    font-size: 1.327em;
 }
 
 #tole h2{
-    font-size: 2em;
+    font-size: 4em;
     margin-bottom: 0.5em;
     color: #f8f8f8;
 }
@@ -52,12 +56,23 @@
     }
 
     #tole {
-        padding: 2empx; /* Reducir el relleno */
+        padding: 2em; /* Reducir el relleno */
     }
 
     #tole p{
      font-size: 16px;
     }
+
+    #tole .engaño {
+      width: auto; /* Ancho del rectángulo */
+      height: auto; /* Altura del rectángulo */
+      margin-right: 10px; 
+      font-size: 10px;
+  }
+
+  .engaños-container2 {
+    margin-top: -0.7em;
+}
 
 }
 
@@ -104,8 +119,10 @@
 
 .text {
   color: #f8f8f8;
-  font-size: 16px;
-  padding: 1em 10em;
+  font-size: 1.5em; 
+  line-height: 1.5em;
+  font-weight: 600;
+  padding: 1em 3em;
   bottom: 8px;
   width: 100%;
   text-align: center;
@@ -114,7 +131,7 @@
 
 .title {
   color: #f8f8f8;
-  font-size: 28px;
+  font-size: 2.125em;
   font-weight: 700;
   padding: 8px 12px;
   top: 0;
@@ -122,30 +139,7 @@
   margin-top: 20px;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 10px;
-    width: 10px;
-    margin: 0 2px;
-    background-color: rgba(248, 248, 248, 0.2); /* Color con menor opacidad */
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-  }  
 
-  .dot.active {
-    background-color: red;
-}
-
-
-/* Fading animation */
-
-
-@keyframes fade {
-  from {opacity: .4}
-  to {opacity: 1}
-}
 
 @media screen and (max-width: 768px) {
     .prev, .next {
@@ -165,7 +159,8 @@
     }
     
     .title {
-      font-size: 24px;
+      font-size: 1.2em;
+      line-height: 1.5em;
     }
     
     .text {
@@ -173,7 +168,10 @@
       padding: 0.5em;
     }
 
+    #tole h2{
+      font-size: 1.888em;
   }
+}
 
 
 
