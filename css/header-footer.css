@@ -359,10 +359,6 @@
 
 @media screen and (max-width: 1200px) {
 
-	.right-section a {
-		display: none;
-	}
-
 	.fa-solid.fa-greater-than {
         display: none; /* Ocultar el icono */
     }
