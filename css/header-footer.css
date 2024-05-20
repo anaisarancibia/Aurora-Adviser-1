@@ -293,6 +293,7 @@
 	background: linear-gradient(to right, #CBD3F2 0%, #C1B1E5 50%);
 	padding: 1.5em 2em; /* Adjusted padding */
 	color: #0d2149;
+	width: 100vw;
   }
   
   #footer .inner {
